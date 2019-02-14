@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        img {
+            height: 500px;
+            width: 500px;
+            position: absolute;
+        }
+
+        div {
+            /* position: relative; */
+            height: 500px;
+            width: 500px;
+            /* overflow: hidden; */
+        }
+    </style>
+</head>
+
+<body>
+    <div id="slider-img">
+        <img class="img-anim" src="https://iso.500px.com/wp-content/uploads/2014/06/W4A2827-1-3000x2000.jpg" alt="">
+        <img class="img-anim" src="https://cdn-images-1.medium.com/max/1600/1*q93ipaADzeE7RX0DDPo0LQ.jpeg" alt="">
+        <img class="img-anim" src="https://cdn3.dpmag.com/2018/04/Matiash_DPP_Landscape_01.jpg" alt="">
+        <img class="img-anim"
+            src="https://cdn.photographylife.com/wp-content/uploads/2017/01/Landscape-photography-example.jpg" alt="">
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+        $(function () {
+            setInterval(function () {
+                $('#slider-img').animate({ left: 0 }, 500, function () {
+                    $('#slider-img img:first-child').appendTo('#slider-img');
+                    $('#slider-img').css('left', '10');
+
+                });
+            }, 1000);
+        });
+        // $(document).ready(function(){
+        //     $('button').on('click',function(){
+        //         $('.img-anim').each(function(){
+        //             console.log(this);
+        //             $(this).animate({
+        //             left: '+=1000px'
+        //         },2000);
+        //         })
+        //     })
+        // })
+    </script>
+</body>
+
+</html>

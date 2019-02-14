@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    
+    </style>
+</head>
+<body>
+    <div>
+        <ul>
+            <li>hello</li>
+            <hr>
+            <li>
+                hi
+                <br>
+                hello
+            </li>
+            <hr>
+            <li>
+                hello
+                <br>
+                bye
+                <br>
+                hi
+            </li>
+            <hr>
+        </ul>
+    </div>
+
+   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var max = -1;
+            var content = 0;
+            var ht;
+            $('li').each(function(){
+                ht = $(this).height()
+                if(ht>max){
+                    max = ht;
+                    content = $(this).html()
+                }
+            });
+            $('ul').append(" <br> height is "+max + " of content: <br> " +content);
+        });
+    </script> 
+</body>
+</html>
