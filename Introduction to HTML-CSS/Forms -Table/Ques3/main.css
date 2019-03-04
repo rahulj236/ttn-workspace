@@ -1,0 +1,40 @@
+body{
+    background-image: url("parch.jpg");
+}
+#main {
+    padding: 4em;
+    color: rgb(82,64,32);
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1.heading {
+    text-align: center;
+}
+section.sec_1 {
+    display: flex;
+}
+section.sec_1 {
+    display: flex;
+}
+.sec_1-left {
+    margin-right: 1em;
+}
+.sec_1-right p {
+    margin: 0;
+    font-size: 17px;
+}
+section.sec_2 {
+    display: flex;
+}
+.sec_2-left {
+    width: 73%;
+    margin-right: 1em;
+}
+.sec_2-right {
+    width: 50%;
+}
+.sec_2-right h3 {
+    margin-top: 0;
+    text-align: center;
+}
+
+

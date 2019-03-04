@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            border: 1px solid purple;
+            padding: 1em;
+            margin-bottom: 1em;
+        }
+
+        .btn:hover {
+            text-decoration: underline;
+        }
+
+        .strike {
+            text-decoration: line-through;
+        }
+        #parent{
+            clear: both;
+            overflow: hidden;
+            padding: 2em;
+        }
+        .child-left {
+            width: 100px;
+            float: left;
+        }
+        .child-left p {
+            word-break: normal
+        }
+        .child-right {
+            width: 100px;
+            float: right
+        }
+        .child-right p {
+            word-break: break-all;
+        }
+        .txt p{
+            /* width: 100px; */
+            text-overflow:ellipsis;
+            white-space: nowrap;
+            overflow: hidden; 
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <button class="btn">Show More</button>
+    </div>
+
+    <div class="strike">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis, ducimus? Quam error maxime doloremque,
+        unde dicta assumenda delectus inventore ex ducimus incidunt veniam accusantium aperiam architecto suscipit
+        minima. Ullam, amet?
+    </div>
+
+    <section id="parent">
+        <div class="child-left">
+            <p>spectrophotofluorometrically rfnjdvckjdfnv</p>
+        </div>
+        <div class="child-right">
+            <p>spectrophotofluorometrically rfnjdvckjdfnv</p>
+        </div>
+    </section>
+
+    <div class="txt">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. At dolorum nulla similique porro debitis vitae ut enim modi? Officiis nostrum obcaecati ratione officia laboriosam numquam quo impedit minima aperiam excepturi.</p>
+        </div>
+</body>
+
+</html>

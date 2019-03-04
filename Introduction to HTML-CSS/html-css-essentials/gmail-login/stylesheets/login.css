@@ -1,0 +1,114 @@
+.container {
+    border: 1px solid lightgrey;
+    margin: 90px auto 20px auto;
+    width: 450px;
+    border-radius: 10px;
+}
+.main {
+    padding: 2em;
+}
+section.logo {
+    margin: 3% 40%;
+}
+.google-logo {
+    width: 75px;
+}
+.google-logo img {
+    width: 100%;
+}
+section.SignIn {
+    text-align: center;
+}
+h2.signIn-head {
+    margin: 1% 0%;
+    font-family: 'google_sansregular', arial,sans-serif;
+    line-height: 1.333;
+    font-size: 24px;
+}
+h4.signIn-info {
+    margin: 2% 0%;
+    font-family: 'google_sansregular','Roboto',arial, sans-serif;
+    font-size: 16px;
+    letter-spacing: .1px;
+    line-height: 1.5;
+}
+section.txtBox {
+    text-align: center;
+    margin: 7% 0% 5% 0%;
+}
+input.plholder-anim {
+    padding: 5% 4%;
+    border-radius: 2px 5px;
+    border: 1px solid lightgrey;
+    width: 90%;
+}
+section.forget-email {
+    margin: 2% 0% 10% 0%;
+}
+.fgt a {
+    color: #1a73e8;
+    letter-spacing: 0.6px;
+    font-weight: 600;
+    font-size: 0.8em;
+    font-family: 'Roboto', sans-serif;
+}
+
+.info {
+    color: #5f6368;
+    font-size: 0.9em;
+    font-family: 'google_sansregular','Roboto',arial, sans-serif;
+}
+.learn-more {
+    margin: 1% 0%;
+}
+.learn-more a {
+    color: #1a73e8;
+    letter-spacing: 0.9px;
+    font-weight: 600;
+    font-size: 0.8em;
+    font-family: 'google_sansregular','Roboto', sans-serif;
+}
+section.ftr {
+    margin: 10% 0% 10% 0%;
+    display: flex;
+    justify-content: space-between;
+}
+.crt-acnt a {
+    color: #1a73e8;
+    letter-spacing: 0.9px;
+    font-weight: 600;
+    font-size: 0.8em;
+    font-family: 'Roboto', sans-serif;
+}
+.btn button {
+    background-color: #1a73e8;
+    padding: 10.5px 28px;
+    font-weight: 600;
+    font-family: arial,sans-serif;
+    border: transparent;
+    border-radius: 4px 4px;
+    color: white;
+}
+
+#footer{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 450px;
+}
+.lang select {
+    font-family: 'Roboto',arial,sans-serif;
+    background: none;
+    font-size: 13.5px;
+    color: grey;
+    border: none;
+}
+section.nav {
+    width: 41%;
+}
+.nav a {
+    color: gray;
+    font-size: 13.5px;
+    font-weight: 600;
+    margin-left: 12%;
+}
