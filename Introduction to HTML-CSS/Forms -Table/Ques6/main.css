@@ -1,6 +1,83 @@
-main#main {
-    background-color: #656D8A;
+*{
+    box-sizing: border-box;
+} 
+body {
+    background-color: #636f8b;
+} 
+.terms a {
+    text-decoration: none;
+    color: #0bb44e;
+} 
+.card {
+    margin: 50px auto;
+    width: 35%;
+    background-color: #f2f2f7;
+    padding: 1%;
+    box-shadow: 1px 3px 50px -2px rgba(0, 0, 0, 075); 
+}  
+.align--center {
+    text-align: center;
+    color: #636f8b;
+    font-family: sans-serif;
 }
-section {
-    padding: 3em;
+input[type=text],
+input[type=password],
+input[type=email] {
+    border: 1px solid #bdc7d8;
+    border-radius: 4px;
+    font-size: 18px;
+    padding: 8px 10px;
+    margin-bottom: 5%;
 }
+  
+input[type=submit] {
+    background-color: #0bb44e;
+    padding: 7px 20px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    border: 0;
+    font-size: 19px;
+    margin-bottom: 40px;
+    margin-top: 5%;
+}
+  
+.big__field {
+    display: block;
+    margin: auto;
+    min-width: 83%;
+}
+  
+.small__wrapper{    
+    margin:  0 auto;
+    width: 83%;
+}
+  
+.small__field {
+    display: inline-block;
+    width: 47%;  
+}
+.first__field{
+    margin-right: 16px;
+}
+  
+  input[type="checkbox"] {
+    margin-right: 15px;
+}
+
+.terms {
+    margin: 0 auto;
+    color: #636f8b;
+    font-family: sans-serif;
+    width: 83%;
+}
+.sign__in{
+    font-size: 18px;
+    text-align:center;
+}
+.sign__in a{
+    color:white;
+    text-decoration: underline;
+  
+}
+  

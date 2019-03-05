@@ -3,31 +3,57 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Table ques6</title>
+    <title>question 6</title>
     <link rel="stylesheet" href="main.css">
 </head>
 
 <body>
-    <main id="main">
-        <section>
-            <form action="#" class="form">
-                <div class="name_section disp">
-                    <input type="text" placeholder="First Name" name="fname">
-                    <input type="text" placeholder="Last Name" name="lname">
+    <div class="container">
+
+        <div class="card">
+            <header>
+                <h1 class="align--center">
+                    Register
+                </h1>
+            </header>
+            <p class="align--center">
+
+                Create an account its free and only takes a minute
+            </p>
+
+            <form>
+                <div class="small__wrapper">
+                    <input class="small__field first__field" type=text placeholder="First Name" />
+                    <input class="small__field" type=text placeholder="Last Name" />
+
                 </div>
-                <input type="email" class="disp" placeholder="Email" name="email">
-                <input type="password" class="disp" placeholder="Password" name="password">
-                <input type="password" class="disp" placeholder="Confirm Password" name="confirm-pwd">
-                <div class="disp">
-                    <input type="checkbox">
-                    <p>I accept the <span>Terms of use</span> & <span>Privacy Policy</span></p>
+
+                <input class="big__field" type="email" placeholder="Email" />
+                <input class="big__field" type="password" placeholder="Password" />
+                <input class="big__field" type="password" placeholder="Confirm Password" />
+                <div class="terms ">
+                    <input type="checkbox" name="terms" value="terms"> I accept the <a href="#">Term of Use</a> & <a
+                        href="#">Privacy Policy</a>
                 </div>
-                <input type="submit" class="disp" value="Register Now">
+
+                <input class="big__field" type=submit value="Register Now" />
+
+
             </form>
-        </section>
-    </main>
+
+
+
+        </div>
+        <div class="sign__in">
+            <p style="color:white">
+                Already have an account <a href="#">Sign in</a>
+            </p>
+
+        </div>
+
+
+    </div>
+
 </body>
 
 </html>
