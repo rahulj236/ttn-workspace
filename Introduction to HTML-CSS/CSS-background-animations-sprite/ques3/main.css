@@ -1,0 +1,19 @@
+body{
+    margin: 0px;
+}
+.container{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-image: url("../back.png");
+    background-repeat: no-repeat; 
+}
+.content{
+    background-attachment: local;
+    overflow-y: scroll;
+    margin: 50px auto;
+    width: 500px;
+    height: 500px;
+    background-position: 50%;
+    background-image: url(../parachute.jpeg)
+}

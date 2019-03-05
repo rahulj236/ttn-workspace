@@ -1,0 +1,45 @@
+body{
+    margin:0px;
+}
+.container{
+    width: 100%;
+    position: absolute;
+    background-image: url("../back.png");
+    background-repeat: no-repeat; 
+}
+.content{
+    background-attachment: local;
+    overflow-y: scroll;
+    margin: 50px auto;
+    width: 500px;
+    height: 500px;
+    background-position: 50%;
+    background-image: url(../parachute.jpeg)
+}
+.info{
+    margin: 0%;
+    background-color: #FF0000;	
+}
+.footer{
+    margin: 0 auto;
+    width: 416px;
+}
+.facebook, .instagram, .twitter {
+    background-image: url(../sprite.png);
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 129px;
+    width: 129px;
+}
+  
+.facebook {
+    background-position: -235px -27px;
+}
+  
+.instagram {
+    background-position: -36px -26px;
+}
+  
+.twitter {
+    background-position: -435px -36px;
+}

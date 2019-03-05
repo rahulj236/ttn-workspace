@@ -1,0 +1,17 @@
+.anime{
+    margin: 200px auto;
+    width: 200px;
+    height: 100px;
+    background-color: #ff00ff;
+    border: 1px solid #000;
+    transition-duration:3s; 
+    /* transition-property: transform; */
+    /* transition: transform 3s; */
+}
+.anime:active{
+    width: 100px;
+    height: 200px;
+    background-color: #000;
+    border: 2px solid #ff00ff;
+    transform: scale(2,3);
+}
