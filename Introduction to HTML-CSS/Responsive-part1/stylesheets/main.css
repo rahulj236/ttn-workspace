@@ -33,13 +33,48 @@ a{
     display: flex;
     justify-content: space-between;
 }
-.list {
+
+.right ul{
+    display: flex;
+    justify-content: space-around;
+}
+.right ul li{
+    padding-top: 15px;
+    margin: 0px 10px;
+}
+.right .menu-btn{
+    position: absolute;
+    right: 10px;
+    top: 15px;
+    border: none;
+    display: none;
+    background-color: transparent;
+}
+.right .menu-btn .line{
+    display: block;
+    border: 2px solid white;
+    width: 25px;
+    margin-bottom: 4px;
+    transition: 0.5s;
+}
+#check{
+    position: absolute;
+    top: 15px;
+    right: 11px;
+    display: block;
+    height: 17px;
+    width: 35px;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* .list {
     display: inline-block;
     margin-right: 25px;
 }
 .list:last-child {
     margin-right: 0px;
-}
+} */
 .header-bottom {
     padding: 50px 0px;
     text-align: center;
@@ -163,7 +198,7 @@ label {
     font-weight: 700;
     border-radius: 5px;
     background: transparent;
-    width: 100%;
+    width: 98%;
     padding: 10px 0px 10px 10px;
     border: 1px solid #9be1bb;
 }
@@ -202,10 +237,46 @@ input[type="submit"] {
         font-size: 0.80rem;
         padding: 25px 0px;
     }
-    .list {
+
+    .right ul{
+        display: block;
+        left: 0px;
+        background-color: rgba(0,0,0,0.5);
+        position: absolute;
+        width: 100%;
+        top: 75px;
+        text-align: center;
+        transform: scale(1,0);
+        transition: 1s;
+        transform-origin: top;
+    }
+    .right .menu-btn{
+        display: block;
+        position: static
+    }
+    #check{
+        right: -4px;
+        top: 23px;
+        height: 25px;
+    }
+    #check:checked ~ ul{
+        transform: scale(1,1);
+    }
+    /* #check:checked ~ .menu-btn .line:first-child{
+        transform: rotate(45deg);
+    }
+    #check:checked ~ .menu-btn .line:last-child{
+        transform: rotate(-45deg);
+        margin-top: -16px;
+    }
+    #check:checked ~ .menu-btn .line:nth-child(2){
+        opacity: 0;
+    } */
+
+    /* .list {
         display: inline-block;
         margin-right: 10px;
-    }
+    } */
     .header-bottom {
         padding: 50px 0px;
         text-align: center;
@@ -260,20 +331,23 @@ input[type="submit"] {
         padding: 23px 0px;
     }    
     .list {
-        display: inline-block;
+        display: block;
         margin-right: 8px;
-    }    
+    }  
+    .right ul{
+        top: 71px;
+    }  
+    .right ul li{
+        padding: 15px 0px;
+    }
     .header-bottom h1 {
         font-size: 25px;
     }
     .ftr-card {
         margin-bottom: 10px;
-        border-right: 1px solid;
+        border-right: none;
         padding: 0px 5px;
         display: block;
-    }
-    .ftr-card {
-        border: none;
     }
     .article {
         text-align: center;
