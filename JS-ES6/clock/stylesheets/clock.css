@@ -1,0 +1,32 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #0187c4;
+    color: white;
+    font-family: sans-serif;
+}
+section{
+    text-align: center;
+    margin: 6em auto;
+}
+.msg{
+    font-size: 5em;
+    font-weight: 500;
+}
+.line{
+    margin: 50px auto;
+    display: block;
+    border: 7px solid white;
+    width: 60px;
+}
+.time{
+    font-size: 8em;
+}
+.date{
+    margin-top: 50px;
+    font-size: 3em;
+}
