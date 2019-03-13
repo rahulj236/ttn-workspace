@@ -8,24 +8,15 @@ function clock() {
     var dd = date.getDate();
     var mm = date.toDateString().split(" ")[1];
     var yyyy = date.getFullYear();
-    var meridian = "PM";
+    var meridian;
     var greet;
 
-    if (hr >= 00 && hr < 12) {
-        meridian = 'AM';
-        greet = "Good Morning"
-    }
-    else
-        if (hr >= 12 && hr <= 16) {
-            meridian = "PM";
-            greet = "Good Afternoon";
-    }
-    else {
-            greet = "Good Evening";
-    }
+    greet = wish(hr)
     
-    hr = hourFormat(hr);
+    meridian = AmPm(hr);
 
+    hr = hourFormat(hr);
+debugger;
     dd = checkZero(dd);
     hr = checkZero(hr)
     mn = checkZero(mn);
@@ -34,6 +25,24 @@ function clock() {
     var currentTime = hr + ":" + mn + ":" + sc;
     print(currentTime, meridian, greet, dd, mm, yyyy);
 
+}
+
+function wish(hr){
+    if (hr >= 00 && hr < 12) {
+        greet = "Good Morning"
+    }
+    else
+        if (hr >= 12 && hr <= 16) {
+            greet = "Good Afternoon";
+    }
+    else {
+            greet = "Good Evening";
+    }
+    return greet;
+}
+
+function AmPm(hr){
+    return (hr>=12)? "PM" : "AM" ;
 }
 
 function hourFormat(hr){
