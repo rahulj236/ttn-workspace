@@ -5,7 +5,6 @@ function clock() {
     var hr = date.getHours();
     var mn = date.getMinutes();
     var sc = date.getSeconds();
-    var currentTime = hr + ":" + mn + ":" + sc;
     var dd = date.getDate();
     var mm = date.toDateString().split(" ")[1];
     var yyyy = date.getFullYear();
@@ -20,23 +19,25 @@ function clock() {
         if (hr >= 12 && hr <= 16) {
             meridian = "PM";
             greet = "Good Afternoon";
-        }
+    }
     else {
             greet = "Good Evening";
     }
-
-    if (hr > 12) {
-        hr -= 12;
-        meridian = "PM";
-    }
+    
+    hr = hourFormat(hr);
 
     dd = checkZero(dd);
     hr = checkZero(hr)
     mn = checkZero(mn);
     sc = checkZero(sc);
 
+    var currentTime = hr + ":" + mn + ":" + sc;
     print(currentTime, meridian, greet, dd, mm, yyyy);
 
+}
+
+function hourFormat(hr){
+    return (hr>12)? hr-=12 : hr;
 }
 
 function print(currentTime, meridian, greet, dd, mm, yyyy) {
