@@ -5,37 +5,49 @@ function clock() {
     var hr = date.getHours();
     var mn = date.getMinutes();
     var sc = date.getSeconds();
-    var meridian = "AM";
-    var state;
+    var currentTime = hr + ":" + mn + ":" + sc;
+    var dd = date.getDate();
+    var mm = date.toDateString().split(" ")[1];
+    var yyyy = date.getFullYear();
+    var meridian = "PM";
+    var greet;
+
+    if (hr >= 00 && hr < 12) {
+        meridian = 'AM';
+        greet = "Good Morning"
+    }
+    else
+        if (hr >= 12 && hr <= 16) {
+            meridian = "PM";
+            greet = "Good Afternoon";
+        }
+    else {
+            greet = "Good Evening";
+    }
 
     if (hr > 12) {
         hr -= 12;
         meridian = "PM";
     }
 
-    hr = (hr < 10) ? "0" + hr : hr;
-    mn = (mn < 10) ? "0" + mn : mn;
-    sc = (sc < 10) ? "0" + sc : sc;
+    dd = checkZero(dd);
+    hr = checkZero(hr)
+    mn = checkZero(mn);
+    sc = checkZero(sc);
 
-    if (hr >= 00 && hr < 12 && (meridian == "AM")) {
-        state = "Good Morning"
-    }
-    else
-        if (hr >= 12 && hr < 05 && (meridian == "PM")) {
-            state = "Good Afternoon";
-        }
-    else {
-        state = "Good Evening";
-    }
+    print(currentTime, meridian, greet, dd, mm, yyyy);
 
-    document.querySelector(".title").innerHTML = hr + ":" + mn + ":" + sc + " " + meridian;    
-    
-    document.querySelector(".msg").innerHTML = state;
+}
 
-    document.querySelector(".time").innerHTML = hr + ":" + mn + ":" + sc + " " + meridian;
+function print(currentTime, meridian, greet, dd, mm, yyyy) {
+    document.querySelector(".title").innerHTML = currentTime + " " + meridian;
+    document.querySelector(".msg").innerHTML = greet;
+    document.querySelector(".time").innerHTML = currentTime + " " + meridian;
+    document.querySelector(".date").innerHTML = dd + " " + mm + " " + yyyy;
+}
 
-    document.querySelector(".date").innerHTML = date.getDate() + " " + date.toDateString().split(" ")[1] + " " + date.getFullYear()
-
+function checkZero(i) {
+    return (i < 10) ? "0" + i : i;
 }
 
 setInterval(clock, 1000);
