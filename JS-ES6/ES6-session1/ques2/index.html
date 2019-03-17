@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <ul>
+        <li data-time="5:17">Flexbox Video</li>
+        <li data-time="8:22">Flexbox Video</li>
+        <li data-time="3:34">Redux Video</li>
+        <li data-time="5:23">Flexbox Video</li>
+        <li data-time="7:12">Flexbox Video</li>
+        <li data-time="7:24">Redux Video</li>
+        <li data-time="6:46">Flexbox Video</li>
+        <li data-time="4:45">Flexbox Video</li>
+        <li data-time="4:40">Flexbox Video</li>
+        <li data-time="7:58">Redux Video</li>
+        <li data-time="11:51">Flexbox Video</li>
+        <li data-time="9:13">Flexbox Video</li>
+        <li data-time="5:50">Flexbox Video</li>
+        <li data-time="5:52">Redux Video</li>
+        <li data-time="5:49">Flexbox Video</li>
+        <li data-time="8:57">Flexbox Video</li>
+        <li data-time="11:29">Flexbox Video</li>
+        <li data-time="3:07">Flexbox Video</li>
+        <li data-time="5:59">Redux Video</li>
+        <li data-time="3:31">Flexbox Video</li>
+    </ul>
+
+    <script>
+
+        // 1) Select all the list items on the page and convert to array.
+        console.log("Ques 1");
+        
+        let arr = [];
+        let li = document.querySelectorAll("li");
+        li.forEach((ele) => arr.push(ele));
+
+        console.log(arr);
+
+
+
+        // 2) Filter for only the elements that contain the word 'flexbox'
+        console.log("\n Ques 2");
+
+        arr.filter(ele => {
+            if (ele.innerText.split(" ")[0] == "Flexbox") {
+                console.log(ele);
+            }
+        });
+        
+
+
+        // 3) map down to a list of time strings
+        console.log("\n Ques 3 ")
+
+        let timeList = arr.map(ele => {
+            return ele.getAttribute("data-time");
+
+        });
+        console.log(timeList);
+
+
+
+        // 4) map to an array of seconds
+        console.log("\n Ques 4")
+
+        var seconds = arr.map(ele=>{
+            return ele.getAttribute("data-time").split(":")[1];
+        })
+        console.log(seconds);
+
+
+
+        // 5) reduce to get total using.filter and.map
+
+        
+
+
+
+
+    </script>
+
+</body>
+
+</html>

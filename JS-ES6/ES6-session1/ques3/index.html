@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Q3. Create a markup template using string literal
+
+        const song = {
+            name: 'Dying to live',
+            artist: 'Tupac',
+            featuring: 'Biggie Smalls'
+        };
+
+        function convertMarkup(obj) {
+            return `
+            <div class = "song" >
+                <p>
+                    ${obj.name} ${obj.artist}
+                    (Featuring ${obj.featuring})
+                </p>
+            </div>
+            `        
+        }
+        console.log(convertMarkup(song));
+
+    </script>
+</body>
+
+</html>
