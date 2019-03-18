@@ -9,26 +9,34 @@
 </head>
 
 <body>
-
+    <p class="info"></p>
     <script>
         // Q4.Extract all keys inside address object from user object using destructuring ?
 
         const user = {
-                    firstName: "Sahil",
-                    lastName: "Dua",
-                    Address: {
-                        Line1: "address line 1",
-                        Line2: "address line 2",
-                        State: "Delhi",
-                        Pin: 110085,
-                        Country: "India",
-                        City: "New Delhi",
-                    },
-                    phoneNo: 9999999999
-        }    
-        let {firstName,lastName,phoneNo} = user.Address;
+            firstName: "Sahil",
+            lastName: "Dua",
+            Address: {
+                Line1: "address line 1",
+                Line2: "address line 2",
+                State: "Delhi",
+                Pin: 110085,
+                Country: "India",
+                City: "New Delhi",
+            },
+            phoneNo: 9999999999
+        }
+        let { Line1, Line2, State, Pin, Country, City } = user.Address;
 
-        console.log("User object is ",user.Address);
+        var addr = `
+line1 = ${Line1},
+line2 = ${Line2},
+state = ${State},
+pin = ${Pin},
+country = ${Country},
+city = ${City}`
+        document.querySelector(".info").innerHTML = addr;
+
     </script>
 </body>
 

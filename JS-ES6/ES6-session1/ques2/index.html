@@ -71,7 +71,7 @@
         // 4) map to an array of seconds
         console.log("\n Ques 4")
 
-        var seconds = arr.map(ele=>{
+        let seconds = arr.map(ele=>{
             return ele.getAttribute("data-time").split(":")[1];
         })
         console.log(seconds);
@@ -79,11 +79,25 @@
 
 
         // 5) reduce to get total using.filter and.map
+        console.log("\n Ques 5");
 
+        let totalSeconds = timeList.reduce((accumulator,ele)=>{
+            let min = parseInt(ele.split(":")[0])*60;
+            let sec = parseInt(ele.split(":")[1]);
+            return accumulator + sec + min;
+        },0);
+
+        let hour = round(totalSeconds/3600);
+        totalSeconds = totalSeconds%3600;
+        let minutes = round(totalSeconds/60);
+        totalSeconds = totalSeconds%60;
+
+        console.log(`Time: ${hour} : ${minutes} : ${totalSeconds}`);
         
 
-
-
+        function round(num){
+            return Math.round(num);
+        }
 
     </script>
 
