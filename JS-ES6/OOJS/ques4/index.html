@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ques4</title>
+    <style>
+        li {
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>
+        Q4. Explain 3 properties of argument object.
+    </h2>
+
+    <ul>
+        <li>
+            <b> arguments.callee :</b> 
+            callee is a property of the arguments object. It can be used to refer to the
+            currently executing function inside the function body of that function.
+        </li>
+        <li>
+            <b> arguments[@@iterator] :</b> 
+            It returns a new Array iterator object that contains the values for each
+            index in the arguments.
+        </li>
+        <li>
+            <b> arguments.length:</b> 
+            The number of arguments that were passed to the function.
+        </li>
+    </ul>
+
+    <script>
+        // 1. arguments.callee example
+        console.log("arguments.callee output...");
+
+        function somefunc() {
+            console.log(arguments.callee);
+        }
+        somefunc();
+
+        // 2. arguments[@@iterator] example
+        console.log(" \n arguments[@@iterator] output... ");
+
+        function iterator() {
+            for (let i of arguments) {
+                console.log(i);
+            }
+        }
+        iterator("rahul", "sahil", "vishaka");
+
+        // 3. arguments.length example
+        console.log(" \n arguments.length output... ");
+
+        function len() {
+            for (i=0;i<arguments.length;i++) {
+                console.log(i);
+            }
+        }
+        len("rahul", "sahil", "vishaka");
+    </script>
+
+</body>
+
+</html>

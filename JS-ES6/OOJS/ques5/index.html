@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ques 5</title>
+</head>
+
+<body>
+    <div> </div>
+    <script>
+        //Q5. Create a function which returns number of invocations and number of instances of a function.
+
+        var counterInvocation = 0;
+        var counterInstantiation = 0;
+        function fn() {
+            console.log("fn has been called!!!");
+
+            if (this instanceof Window) {
+                counterInvocation++;
+                document.querySelector("div").innerText += "\n Function invoked : " + counterInvocation;
+            }
+            if (this instanceof fn) {
+                counterInstantiation++;
+                document.querySelector("div").innerText += "\n Function instantiated : " + counterInstantiation;
+            }
+        }
+        fn();
+        fn();
+        new fn();
+        new fn();
+        fn();
+        new fn();
+
+    </script>
+</body>
+
+</html>

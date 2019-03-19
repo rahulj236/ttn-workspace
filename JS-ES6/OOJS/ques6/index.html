@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ques 6</title>
+</head>
+
+<body>
+    <button>Counter()</button>
+    <div id="div"></div>
+
+    <script>
+
+        // Q6. Create a counter using closures.
+
+        function counterOuter() {
+            var counter = 0;
+            function counterInner() {
+                ++counter;
+                return counter;
+            }
+            return counterInner;
+        }
+        var count = counterOuter();
+        document.querySelector("button").addEventListener("click", function () {
+            document.querySelector("div").innerText = count();
+        })
+    </script>
+</body>
+
+</html>

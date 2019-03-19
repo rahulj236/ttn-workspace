@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ques 2</title>
+</head>
+
+<body>
+    <h2 class="num">
+
+    </h2>
+    <script>
+        // Q2. Given an array, say [1,2,3,4,5]. Print each element of an array after 3 secs.
+
+        let arr = [1, 2, 3, 4, 5];
+        for (i in arr) {
+            time(i, arr);
+        }
+        function time(i, arr){
+            var j = i;
+            setTimeout(() => {
+                // console.log(arr[j]);
+                document.querySelector(".num").innerHTML += "<br>" + arr[j];
+            }, i * 3000);
+        }
+    </script>
+</body>
+
+</html>

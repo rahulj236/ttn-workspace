@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ques 3</title>
+</head>
+
+<body>
+    <h2>Bind() vs Call()</h2>
+    <table border="1" cellspacing="5" cellpadding="5">
+        <thead>
+            <tr>
+                <th>call()</th>
+                <th>bind()</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>calls a method with an owner object as an argument (parameter)</td>
+                <td>bind() works with object name itself</td>
+            </tr>
+            <tr>
+                <td>call() method execute the function immediately as it is called upon right away</td>
+                <td>In bind() , you can call the function later</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+<script>
+    //call() example
+    var person = {
+        fullName: function (greet) {
+            return greet + " " + this.firstName + " " + this.lastName;
+        }
+    }
+    var person1 = {
+        firstName: "John",
+        lastName: "Doe"
+    }
+    var p1 = person.fullName.call(person1, "Hello!");
+    console.log("call() example....",p1);
+    console.log("\n")
+
+    //bind() example
+    var person = {
+        name: 'Rahul',
+        print: function () {
+            console.log('Name is: ', this.name); // this.name means person.name in this context
+        }
+    };
+    console.log(" \n bind() example")
+    var p = person.print;
+    p(); // won't print the name
+
+    p = p.bind(person);
+    p(); // will print 'Rahul'
+
+
+
+</script>
+
+</html>
